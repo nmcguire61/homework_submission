@@ -1,0 +1,16 @@
+We try not to have an object with too much data, this is refered to as to god objects.
+Main is your god file this is where everythign happens
+the models contain the info and classes.
+
+#set users
+#
+#[list].each { |person| b.entered_by(person) }
+#
+#b.catch_lift name
+#
+#b.lifts.first.travel_to! #number
+#
+#b.catch_lift #name
+
+
+
