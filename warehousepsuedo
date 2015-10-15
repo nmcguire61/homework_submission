@@ -1,0 +1,20 @@
+assign each "item" (as value) and :location (as key) into inventory_hash
+
+assign each :location into path_order_array
+
+menu asking user to enter locations one at a time
+  "enter location followed by enter button"
+  enter value into location_query array as :symbol
+    loop
+    "enter next location or type 'f' to continue"
+    enter value into location_query array as :symbol unless 'f'
+    'f' breaks loop
+  puts each "item" from inventory_hash using location_query values
+
+find min_index_number from path_order_array
+find max_index_number from path_order_array
+
+number_of_steps = max_index_number - min_index_number
+
+puts "The number of steps between the items is #{number_of_steps}""     
+
