@@ -1,0 +1,147 @@
+
+## SQL Questions
+
+Using the SQLite3 Database file given to you as the source of data to answer the questions.  Copy and the SQL command you have used to get the answer, and paste it below the question, along with the result they gave.
+
+
+
+1. Select the names of all users.
+
+sqlite> select name from users
+   ...> ;
+Rick Henri
+Michael Pavling
+Sandy McMillan
+Chae Cramb
+Syed Atique
+Simon Osborne
+Kieran Pringle
+Craig Lamont
+Zsolt Podoba
+Keith Martin
+Peter Hyder
+Alaere Samuel
+Kathryn Kiernan
+Iwona Sztorc
+Nevin Officer
+Graeme Stewart
+Neil McGuire
+Graeme Kean
+sqlite> 
+
+
+
+2. Select the names of all shows that cost less than £15.
+
+sqlite> select name from shows where price < 15.00
+   ...> ;
+Le Haggis
+Paul Dabek Mischief 
+Best of Burlesque
+Two become One
+Urinetown
+Two girls, one cup of comedy
+sqlite> 
+
+3. Select the names and prices of all shows, ordered by price in ascending order.
+
+sqlite> select name, price from shows order by price;
+Two girls, one cup of comedy|6.0
+Best of Burlesque|7.99
+Two become One|8.5
+Urinetown|8.5
+Le Haggis|12.99
+Paul Dabek Mischief |12.99
+Shitfaced Shakespeare|16.5
+Game of Thrones - The Musical|16.5
+Joe Stilgoe: Songs on Film – The Sequel|16.5
+Camille O'Sullivan|17.99
+Aaabeduation – A Magic Show|17.99
+Balletronics|32.0
+Edinburgh Royal Tattoo|32.99
+sqlite> 
+
+
+4. Select the average price of all shows.
+
+sqlite> .schema
+CREATE TABLE "shows" ("id" integer primary key, "created_at" time, "name" varchar(255), "price" float);
+CREATE TABLE "times" ("id" integer primary key, "time" varchar(255), "show_id" integer);
+CREATE TABLE "users" ("id" integer primary key, "name" varchar(255));
+CREATE TABLE "shows_users" ("id" integer primary key, "show_id" integer, "user_id" integer);
+sqlite> select avg(price) from shows
+   ...> ;
+15.9569230769231
+sqlite> 
+
+
+5. Select the price of the least expensive show.
+
+sqlite> select max (price) from shows;
+32.99
+
+
+6. Select the sum of the price of all shows.
+
+sqlite> select sum (price) from shows;
+207.44
+
+7. Select the sum of the price of all shows whose prices is less than £20.
+
+sqlite> select sum(price) from shows where price < 20.00;
+142.45
+sqlite> 
+
+8. Select the name and price of the most expensive show.
+
+sqlite> select name, max(price) from shows;
+Edinburgh Royal Tattoo|32.99
+
+9. Select the name and price of the second from cheapest show.
+
+sqlite> select name, min(price)[-1] from shows;
+Two girls, one cup of comedy|6.0
+
+
+10. Select the time for the Edinburgh Royal Tattoo.
+
+sqlite> select(time) from times where id = (select(id) from shows where name = 'Edinburgh Royal Tattoo');
+22:00
+
+11. Select the names of all users whose names start with the letter "N".
+
+sqlite> select name from users where name like 'N%';
+Nevin Officer
+Neil McGuire
+
+12. Select the names of users whose names contain "mi".
+
+Michael Pavling
+Sandy McMillan
+sqlite> 
+
+
+13. Select the number of users who want to see "Shitfaced Shakespeare".
+
+14. Select all of the user names and the count of shows they're going to see.
+
+15. SELECT all users who are going to a show at 17:15.
+
+16. Insert a user with the name "Antonio Goncalves" into the users table.
+
+17. Select the id of the user with your name.
+
+18. Insert a record that Antonio Goncalves wants to attend the show "Two girls, one cup of comedy".
+
+19. Updates the name of the "Antonio Goncalves" user to be "Tony Goncalves".
+
+20. Deletes the user with the name 'Tony Goncalves'.
+
+21. Deletes the shows for the user you just deleted.
+
+
+## Hints
+
+  - As with anything, if you get stuck, move on, then go back if you have time.
+  - Don't spend all night on it!
+  - Use resources online to solve harder ones - there are solutions to these questions that work with what we've learnt today, but other tools exist in SQL that could make the queries 'better' or 'easier'.
