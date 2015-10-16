@@ -9,6 +9,10 @@ class Hotel
     @occupancy = {}
   end
 
+ def pretty_string
+  "#{name}"
+ end
+
  #def room_here()
  #  @rooms
  #end

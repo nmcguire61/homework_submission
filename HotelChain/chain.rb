@@ -15,7 +15,8 @@ class Chain
      if hotels.empty?
        "Buy more property Mr Moneybags."
      else
-      hotels do |key, hotel|      
+      hotels.map do |hotel_name, hotel|
+        puts hotel.name      
        end#.join("\n")
      end
    

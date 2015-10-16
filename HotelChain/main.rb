@@ -9,9 +9,9 @@ require_relative 'methods'
 
 chain = Chain.new name: "Shenanigans Hotels Ltd"
 
-chain.add_hotel(Hotel.new(name: 'Edinburger Centre', post_code: 'E1 1EX', rooms: 14))
-chain.add_hotel(Hotel.new(name: 'Edinburger Airport', post_code: 'E9 3YF', rooms: 25))
-chain.add_hotel(Hotel.new(name: 'Glas Vegas Centre', post_code: 'G1 4VB', rooms: 12))
+chain.add_hotel(Hotel.new(name: 'Edinburger Centre', post_code: 'E1 1EX', rooms: "14"))
+chain.add_hotel(Hotel.new(name: 'Edinburger Airport', post_code: 'E9 3YF', rooms: "25"))
+chain.add_hotel(Hotel.new(name: 'Glas Vegas Centre', post_code: 'G1 4VB', rooms: "12"))
 
 
 binding.pry;
