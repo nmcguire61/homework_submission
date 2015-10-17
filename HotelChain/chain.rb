@@ -12,15 +12,9 @@ class Chain
   end
 
   def list_hotel
-     if hotels.empty?
-       "Buy more property Mr Moneybags."
-     else
-      hotels.map do |hotel_name, hotel|
-        puts hotel.name      
-       end#.join("\n")
-     end
-   
-
+    hotels.map do |hotel_name, hotel|
+      puts hotel.name      
+    end#.join("\n")
   end
 
 end

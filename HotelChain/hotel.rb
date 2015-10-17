@@ -5,15 +5,13 @@ class Hotel
   def initialize(options={})
     @name = options[:name]
     @post_code = options[:post_code]
-    @rooms = options[:rooms]
+    @rooms = {}
     @occupancy = {}
   end
 
- def pretty_string
-  "#{name}"
- end
+ # #def list_rooms
+  #  Hotel.collect{|key, hash| hash[:*] == "empty" }
+  #end
 
- #def room_here()
- #  @rooms
- #end
+
 end

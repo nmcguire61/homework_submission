@@ -9,13 +9,11 @@ require_relative 'methods'
 
 chain = Chain.new name: "Shenanigans Hotels Ltd"
 
-chain.add_hotel(Hotel.new(name: 'Edinburger Centre', post_code: 'E1 1EX', rooms: "14"))
-chain.add_hotel(Hotel.new(name: 'Edinburger Airport', post_code: 'E9 3YF', rooms: "25"))
-chain.add_hotel(Hotel.new(name: 'Glas Vegas Centre', post_code: 'G1 4VB', rooms: "12"))
+chain.add_hotel(Hotel.new(name: 'Edinburger Centre', post_code: 'E1 1EX', rooms: hotel_rooms))
+chain.add_hotel(Hotel.new(name: 'Edinburger Airport', post_code: 'E9 3YF', rooms: hotel_rooms))
+chain.add_hotel(Hotel.new(name: 'Glas Vegas Centre', post_code: 'G1 4VB', rooms: hotel_rooms))
 
-
-binding.pry;
-
+#binding.pry;
 
 response = menu
 
@@ -25,7 +23,7 @@ until response == 0
   when 1
     list_hotel(chain)
   when 2
-    #make_booking()
+    make_booking(chain)
   when 3
     #checkout()
   when 4

@@ -1,5 +1,30 @@
+def make_booking (chain)
+  puts "Which hotel would you like a room in:"
+  chain.list_hotel
+  puts
+  print "==> "
+  booking_hotel = gets.chomp
+  puts
+  puts "Which room would you like:"
+  puts
+  puts booking_hotel.select{|key, hash| hash[rooms] == "empty" }
+
+
+  binding.pry;
+end
+
+#def list_rooms
+#  puts booking_hotel.collect{|key, hash| hash[:*] == "empty" }
+#end
+
 def list_hotel(chain)
   puts chain.list_hotel
+end
+
+
+
+def hotel_rooms
+  hotel_rooms = {room_1: "empty", room_2: "empty", room_3: "empty", room_4: "empty", room_5: "empty"}
 end
 
 def menu
@@ -21,15 +46,3 @@ def menu
   gets.to_i
 end
 
-
-  #case response
-  #when 1
-  #  list_hotels(chain)
-  #when 2
-  #  #make_booking()
-  #when 3
-  #  #checkout()
-  #when 4
-  # # occupancy()
-  #when 5
-  #  #revenue()#
