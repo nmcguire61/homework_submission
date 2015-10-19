@@ -1,0 +1,17 @@
+
+making a noughts and crosses:
+
+What do we need
+  New Game
+  store moves
+  Two Players
+  Make a move
+  Determine finish 
+    assign result
+  Determine go
+  Validate move
+    4 ifs for is it the right square, is the square already full.
+
+How do we store the information:
+  chess like grid based system
+  store it all in a single array
