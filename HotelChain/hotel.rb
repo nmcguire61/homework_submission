@@ -5,7 +5,7 @@ class Hotel
   def initialize(options={})
     @name = options[:name]
     @post_code = options[:post_code]
-    @rooms = {}
+    @rooms = options[:rooms]
     @occupancy = {}
   end
 

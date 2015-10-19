@@ -4,10 +4,11 @@ def make_booking (chain)
   puts
   print "==> "
   booking_hotel = gets.chomp
+  hotel = chain.hotels[booking_hotel]
   puts
   puts "Which room would you like:"
   puts
-  puts booking_hotel.select{|key, hash| hash[rooms] == "empty" }
+  puts hotel.rooms.select{|key, room| room == "empty" }
 
 
   binding.pry;
@@ -24,7 +25,7 @@ end
 
 
 def hotel_rooms
-  hotel_rooms = {room_1: "empty", room_2: "empty", room_3: "empty", room_4: "empty", room_5: "empty"}
+  hotel_rooms = {room_1: "full", room_2: "empty", room_3: "empty", room_4: "empty", room_5: "empty"}
 end
 
 def menu
