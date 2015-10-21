@@ -1,0 +1,15 @@
+<form method='post' action='/items/<%= @item['id'] %>/delete'>
+  <button>Delete Post</button>
+</form>
+<section>
+  <article>
+    <dl>
+      <dt>Item: </dt>
+      <dd><%= @item['item'] %></dd>
+    </dl>
+    <dl>
+      <dt>Details: </dt>
+      <dd><%= @item['details'] %></dd>
+    </dl>
+  </article>
+</section>
