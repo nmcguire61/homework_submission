@@ -1,0 +1,9 @@
+<% if @result %>
+  <h1>the result is <%= @result %></h1>
+<% end %>
+
+<form method="get" action="/squareroot">
+  <input type="number" name="first_number"
+  placeholder="first number" step="0.01" value="<%= @first_number %>">
+  <button>CALCULATE!</button>
+</form>

@@ -1,0 +1,9 @@
+<% if @result %>
+  <h1><%= @result %></h1>
+<% end %>
+
+<form method="get" action="/death_clock">
+  <input type="date" name="dod"
+  placeholder="Your Date of Birth Here" value="<%= @dod %>">
+  <button>CALCULATE!</button>
+</form>

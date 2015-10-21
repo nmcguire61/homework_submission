@@ -1,0 +1,10 @@
+<% if @result %>
+  <h1><%= @result %></h1>
+<% end %>
+
+
+<form method="get" action="/age">
+  <input type="date" name="dob"
+  placeholder="Your Date of Birth Here" value="<%= @dob %>">
+  <button>CALCULATE!</button>
+</form>
