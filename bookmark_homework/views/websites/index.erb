@@ -1,0 +1,11 @@
+<ul>
+  <% @websites.each do |website| %>
+  <li>
+    <%= website.name %>
+    <a href='/websites/<%= website.id %>/edit'>Edit</a>
+    <form method="post" action='/websites/<%= website.id %>/delete'>
+      <button>Delete</button>
+    </form>
+  </li>
+  <% end %>
+</ul>
