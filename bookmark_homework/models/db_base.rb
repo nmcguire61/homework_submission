@@ -32,15 +32,19 @@ class DBBase
     conn = PG.connect(dbname: 'bookmark', host: 'localhost')
     begin
       result = conn.exec(sql)
+      # keep getting this error: PG::SyntaxError at /websites ERROR: syntax error at or near "{" LINE 1: INSERT INTO websites ({:name=>:string, :url=>:string, :detai... ^ no idea why.
     ensure
       conn.close
     end
     result
   end
 
-  def self.all
-    results = run_sql("select * from #{table_name}").first
-    results.map { |result| self.new(result) }
+  def self.all(conditions={})
+    where = conditions.map { |attribute, value| "#{attribute} = #{sql_sanitize(value, get_attributes[attribute])}" }.join(' AND ')
+    where = "WHERE #{where}" unless where.empty?
+
+    results = run_sql("SELECT #{table_name}.* FROM #{table_name} #{where}")
+    results.map { |result| self.new(result) }
   end
 
   def self.find(id)
@@ -94,7 +98,7 @@ class DBBase
         sql_values << sql_sanitize(self.send(attribute), type)
       end
 
-      sql = "insert into #{table_name} (#{sql_fields.join(',')}) values (#{sql_values.join(',')})returning id"
+      sql = "INSERT INTO #{table_name} (#{sql_fields.join(',')}) VALUES (#{sql_values.join(',')}) returning id"
       self.id = run_sql(sql).first['id']
 
     else
