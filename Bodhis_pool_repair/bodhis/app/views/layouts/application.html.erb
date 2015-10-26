@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bodhis</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<%= lint_to "home", home_path %>
+<%= lint_to "services", home_path %>
+<%= lint_to "bookings", home_path %>
+<%= lint_to "about_us", home_path %>
+
+<%= yield %>
+
+</body>
+</html>
