@@ -1,15 +1,25 @@
 body {
   background-color: 000000;
+  
 }
 
 h1 {
   color: #CCCCCC;
   background-color: #FF5050;
   border: #FFFFFF, solid;
+  padding: 0 10px 0 10px
+}
+
+h2 {
+  color: #CCCCCC;
+  background-color: #FF5050;
+  border: #FFFFFF, solid;
+  padding: 0 auto;
 }
 
 img {
   float: center;
+  max-width: 100%;
 }
 
 /*
