@@ -1,0 +1,10 @@
+<%= @countries.each do |country| %>
+  <%= country.name %>
+  <br>
+  <%= link_to("More about #{country.name}", country_path(country)) %>
+  <br>
+  <%= link_to('Edit Country', edit_country_path(country)) %>
+  <%= button_to('Delete Entry', country_path(country), method: :delete, data: {confirm: 'Are you sure you want obliterate this entry?'}) %>
+  <br>
+  <br>
+<% end %>

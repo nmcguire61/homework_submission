@@ -1,0 +1,9 @@
+<h1><%= @country.name %></h1>
+<p><%= @country.name %>'s flag is: 
+<br> 
+<%= image_tag(@country.flag, alt: "pic of  country's flag", width:200) %>
+<br>
+<br>
+<%= @country.name %> is about <%= @country.size %> (square miles) and is home to around <%= @country.population %> people.  The most common language is <%= @country.language %>. 
+
+#get all data printed at the bottom of the screen other than that code works, how terrifying.

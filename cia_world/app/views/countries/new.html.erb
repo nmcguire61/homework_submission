@@ -1,0 +1,18 @@
+<%= form_for @country do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <br>
+  <%= f.label :flag %>
+  <%= f.text_field :flag %>
+  <br>
+  <%= f.label :size %>
+  <%= f.text_field :size %>
+  <br>
+  <%= f.label :population %>
+  <%= f.text_field :population %>
+  <br>
+  <%= f.label :language %>
+  <%= f.text_field :language %>
+  <br>
+  <%= f.submit 'Add Country' %>
+<% end %>
