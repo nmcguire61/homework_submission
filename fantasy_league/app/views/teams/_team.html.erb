@@ -1,0 +1,8 @@
+
+<div class="individual">
+<%= team.name %> was founded in <%= team.founded %>.
+<%= link_to("Show #{team.name}", team_path(team)) %>
+<%= button_to('Delete Team', team_path(team), method: :delete, data: {confirm: 'Are you sure you want obliterate this team?'}) %>
+<%= link_to('Edit Team', edit_team_path(team)) %>
+<br>
+</div>

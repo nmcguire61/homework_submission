@@ -1,0 +1,6 @@
+<h1><%= @team.name %></h1>
+<p><%= @team.name %>'s mascot is <%= @team.mascot %></p>
+<%= image_tag(@team.image, alt: 'pic of the teams mascot', width:200) %>
+<% @team.players.each do |player| %>
+<%= link_to(player.last_name, player_path(player)) %>
+<% end %>

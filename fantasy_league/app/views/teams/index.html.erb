@@ -1,0 +1,13 @@
+<%= render @teams %> <%#as long as you call your partial the same name of the collection %>
+
+<%#= render partial: 'team', collection: @teams %>
+
+<%# @teams.each do |team| %>
+
+  <%#= render partial: "team", locals: { team: team} %>
+
+  <%#= render partial: "team", object: team %> <%# use this if, as above, "team" is the same name as { team: team} %>
+
+  <%#= render team %> <%# rails will look for collection of teams for each of those teams it will iterate using a variable team then look for a partial called team to use.%>
+
+<%# end %>

@@ -1,0 +1,2 @@
+<h1><%= @player.first_name %> <%= @player.last_name %></h1>
+<p>Is <%= link_to(@player.team.try(:name), team_path(@player.team.id)) %> star <%= @player.position %> and rides on a <%= @player.broomstick %>.</p>

@@ -1,0 +1,31 @@
+<div class="form">
+  <%= form_for @team do |f| %> 
+  <br>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <br>
+  <br>
+  <%= f.label :image %>
+  <%= f.text_field :image %>
+  <br>
+  <br>
+  <%= f.label :founded %>
+  <%= f.date_select :founded, :start_year=>1800 %>
+  <br>
+  <br>
+  <%= f.label :mascot %>
+  <%= f.text_field :mascot %>
+  <br>
+  <br>
+  <%= f.label :league %>
+  <%= f.text_field :league %>
+  <br>
+  <br>
+  <%= f.label :last_position %>
+  <%= f.text_field :last_position %>
+  <br>
+  <br>
+  <%= f.submit button_text %>
+  <br>
+  <% end %>
+</div>

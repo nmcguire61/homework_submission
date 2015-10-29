@@ -1,0 +1,73 @@
+body {
+    background: url(http://pawderosaranch.com/wp-content/uploads/2013/11/shutterstock_146878922.jpg) no-repeat center center fixed; 
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    color: #FFF;
+    text-shadow: 4px 4px 6px #000;
+}
+
+.second_background{ 
+   position: relative; 
+   width: 100%;
+}
+
+.mainbit {
+  position: absolute;
+  top: 400px;
+  left: 100px;
+  margin: 20px auto 0 auto;
+  width: 80%;
+}
+
+.individual {
+  position: block;
+  margin-bottom: 30px;
+}
+
+.form {
+ 
+  margin-bottom: 10px;
+  padding: 0 auto 40 auto;
+}
+
+header {
+  background: url(http://pawderosaranch.com/wp-content/uploads/2013/11/shutterstock_146878922.jpg) no-repeat center center fixed; 
+  background-color: #996633;
+  padding-top: 28px;
+  color: #FFF;
+  text-shadow: 4px 4px 6px #000;
+}
+
+ul {
+  color: #FFF;
+  list-style-type: none;
+  padding-left: 0; 
+}
+
+li {
+  display: inline;
+}
+
+li a {
+  text-decoration: none;
+  color: #FFF;
+  padding: 10px;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ * http://saberslate.org/wp-content/uploads/2014/04/pitch.jpg
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
