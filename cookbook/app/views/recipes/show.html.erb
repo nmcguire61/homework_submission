@@ -17,7 +17,9 @@
 
 <p>
   <strong>Ingredients</strong>
-  place holder
+  <% @recipe.ingredients.each do |ingredient| %>
+  <%= simple_format ingredient.name %> 
+  <% end %>
 </p>
 
 <%= link_to 'Edit', edit_recipe_path(@recipe) %> |
