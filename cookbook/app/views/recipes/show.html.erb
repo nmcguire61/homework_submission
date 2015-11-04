@@ -17,8 +17,8 @@
 
 <p>
   <strong>Ingredients</strong>
-  <% @recipe.ingredients.each do |ingredient| %>
-  <%= simple_format ingredient.name %> 
+  <% @recipe.quantities.each do |quantity| %>
+  <%= simple_format quantity.ingredient.try(:name) %> 
   <% end %>
 </p>
 
