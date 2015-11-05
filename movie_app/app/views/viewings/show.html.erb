@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Movie</strong>
+  <%= @viewing.movie.try(:title) %>
+</p>
+
+<p>
+  <strong>Viewing type:</strong>
+  <%= @viewing.viewing_type %>
+</p>
+
+<p>
+  <strong>When viewed:</strong>
+  <%= @viewing.when_viewed %>
+</p>
+
+<%= link_to 'Edit', edit_viewing_path(@viewing) %> |
+<%= link_to 'Back', viewings_path %>

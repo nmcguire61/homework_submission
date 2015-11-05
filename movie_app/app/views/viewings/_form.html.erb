@@ -1,0 +1,29 @@
+<%= form_for(@viewing) do |f| %>
+  <% if @viewing.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@viewing.errors.count, "error") %> prohibited this viewing from being saved:</h2>
+
+      <ul>
+      <% @viewing.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :viewing_type %><br>
+    <%= f.text_field :viewing_type %>
+  </div>
+  <div class="field">
+    <%= f.label :when_viewed %><br>
+    <%= f.text_field :when_viewed %>
+  </div>
+  <div class="field">
+    <%= f.label :movie_id %><br>
+    <%= f.select("movie_id", Movie.all.map { |m| [m.title, m.id]}) %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
